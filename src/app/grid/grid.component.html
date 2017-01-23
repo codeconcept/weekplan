@@ -1,0 +1,9 @@
+<div>
+  <div class="wrapper">
+    <div class="container" *ngFor="let group of groups" [dragula]="firstBag">
+      <h3 [innerHtml]="group.name"></h3>
+      <div *ngFor="let item of group.items" [innerHtml]="item.title"></div>
+    </div>
+  </div>
+</div>
+

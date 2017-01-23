@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-12">
+    <form (ngSubmit)="addTask($event, form.value)" #form="ngForm">
+      <label for="taskTitle">Titre</label>
+      <input type="text" 
+        name="taskTitle" 
+        [(ngModel)]="taskTitle" 
+        id="taskTitle"
+        placeholder="titre de la nouvelle tâche"><br>        
+      <label for="taskDescription">Description</label> 
+      <textarea
+        name="taskDescription"
+        cols="85"
+        rows="5"
+        [(ngModel)]="taskDescription"
+        id="taskDescription"
+        placeholder="détails de la nouvelle tâche"
+      ></textarea> 
+      <button type="submit">ajouter</button>
+    </form>
+  </div>
+</div>

@@ -4,17 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { GridModule } from './grid/grid.module';
+import {CrudLocalstorageService } from './services/crud-localstorage.service';
+import { AddFormComponent } from './add-form/add-form.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    GridModule
   ],
-  providers: [],
+  providers: [ CrudLocalstorageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
